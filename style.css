@@ -1,0 +1,66 @@
+body {
+    padding: 25px;
+    background-color: forestgreen;
+}
+
+#intro {
+    margin: auto;
+    margin-bottom: 50px;
+    width: 50%;
+    border: 3px solid red;
+    padding: 20px;
+    font-weight: bold;
+
+}
+
+#pizza {
+    position: absolute;
+    left:50px;
+    top:50px;
+    box-sizing:border-box;
+    width: 200px;
+    height: 200px;
+}
+
+#pizza2 {
+    position: absolute;
+    right:50px;
+    top:50px;
+    box-sizing:border-box;
+    width: 400px;
+    height: 200px;
+}
+
+.tab-pane {
+    padding: 10px;
+}
+.pizza_forms {
+    margin: auto;
+    width: 50%;
+    border: 3px solid red;
+    padding: 10px;
+}
+
+
+h1 {
+    margin: auto;
+    width: 50%;
+    padding-bottom: 30px;
+}
+
+#pizza_delivery {
+    display:none;
+}
+
+#order_details {
+    display:none;
+}
+
+.address_form {
+    width:150px;
+}
+
+.address_input {
+    width: 300px;
+}
+
