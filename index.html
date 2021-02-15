@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pacos Pizza Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body id="page">
+<h1 id="restaurant_name">Paco's Pizza Shop</h1>
+<div class="tab-content">
+    <p id="intro">Paco's Pizza Shop offers a variety of delicious pizzas ready to be served to you! As a family business, we dedicate our time into perfecting our pizzas and make sure they are all done with love and leave our dear customers wanting for more. </p>
+    <img id="pizza" src="https://www.willmarlakesarea.com/wp-content/uploads/2015/08/Dominos-Pizza-426x426.png"/>
+    <img id="pizza2" src="https://d6ozfheqtj1tz.cloudfront.net/ChIJg4fDL7dpYYgR31WpR9lbQTI/xuHtRqZ4fZ.png"/>
+    <div id="pizza_details" class="pizza_forms">
+        <h2>Choose Pizza Details</h2>
+        <br>
+        <h4 id="size">Size</h4>
+        <form class="button_form" id = "pizza_size">
+            <input type="radio" name = "size" id="size_1" data-price="7" value="Small"/>
+            <label for = "size_1">Small: $7</label>
+            <br>
+            <input type="radio" name = "size" id="size_2" data-price="9" value="Medium"/>
+            <label for = "size_2">Medium: $9</label>
+            <br>
+            <input type="radio" name = "size" id="size_3" data-price="12" value="Large"/>
+            <label for = "size_3">Large: $12</label>
+        </form>
+
+        <br>
+        <h4 id="crust">Crust</h4>
+        <form class="button_form" id = "pizza_crust">
+            <input type="radio" name = "crust" id="crust_1" value="Thin Crust" />
+            <label for = "crust_1">Thin</label>
+            <br>
+            <input type="radio" name = "crust" id="crust_2" value="Pan crust" />
+            <label for = "crust_2">Pan</label>
+            <br>
+            <input type="radio" name = "crust" id="crust_3" value="Gluten Free Crust" />
+            <label for = "crust_3">Gluten Free</label>
+        </form>
+
+        <br>
+        <h4 id="meats">Meats ($1.50 Per Topping)</h4>
+        <form class="button_form" id="pizza_meats">
+            <input type="checkbox" name="meats" id="meats_1" data-price="1.5" value="Pepperoni"/>
+            <label for = "meats_1">Pepperoni</label>
+            <br>
+            <input type="checkbox" name="meats" id="meats_2" data-price="1.5" value="Sausage"/>
+            <label for = "meats_2">Sausage</label>
+            <br>
+            <input type="checkbox" name="meats" id="meats_3" data-price="1.5" value="Canadian Bacon"/>
+            <label for = "meats_3">Canadian Bacon</label>
+            <br>
+            <input type="checkbox" name="meats" id="meats_4" data-price="1.5" value="Philly Steak"/>
+            <label for = "meats_4">Philly Steak</label>
+            <br>
+            <input type="checkbox" name="meats" id="meats_5" data-price="1.5" value="Grilled Chicken"/>
+            <label for = "meats_5">Grilled Chicken</label>
+            <br>
+            <input type="checkbox" name="meats" id="meats_6" data-price="1.5" value="Bacon"/>
+            <label for = "meats_6">Bacon</label>
+        </form>
+
+        <br>
+        <h4 id="veggies">Vegetables ($1.00 Per Topping)</h4>
+        <form class="button_form" id="pizza_veggies">
+            <input type="checkbox" name="toppings" id="veggies_1" data-price="1" value="Mushrooms"/>
+            <label for = "veggies_1">Mushrooms</label>
+            <br>
+            <input type="checkbox" name="toppings" id="veggies_2" data-price="1" value="Black Olives"/>
+            <label for = "veggies_2">Black Olives</label>
+            <br>
+            <input type="checkbox" name="toppings" id="veggies_3" data-price="1" value="Green Peppers"/>
+            <label for = "veggies_3">Green Peppers</label>
+            <br>
+            <input type="checkbox" name="toppings" id="veggies_4" data-price="1" value="Spinach"/>
+            <label for = "veggies_4">Spinach</label>
+        </form>
+        <button id = "submit_details">Confirm Order</button>
+    </div>
+
+    <div id ="pizza_delivery" class="pizza_forms">
+        <h2>Enter your delivery information</h2>
+        <br>
+        <form id="address_form">
+            <label for = "delivery_1" class="address_form">Name:</label>
+            <input type="text" class="address_input" name="delivery" id="delivery_1" data-delivery="name"/>
+            <br>
+            <label for = "delivery_2" class="address_form" >Address:</label>
+            <input type="text" class="address_input" name="delivery" id="delivery_2" data-delivery="address"/>
+            <br>
+            <label for = "delivery_3" class="address_form">Phone Number:</label>
+            <input type="text" class="address_input" name="delivery" id="delivery_3" data-delivery="phone"/>
+            <br>
+            <button id = "submit_address">Submit Address</button>
+        </form>
+    </div>
+
+    <div id="order_details" class="pizza_forms">
+        <h2>Order Confirmation</h2>
+        <h4>Pizza Details:</h4>
+        <ul>
+            <li id="selected_size"></li>
+            <li id="selected_crust"></li>
+            <li id="selected_meats"></li>
+            <li id="selected_veggies"></li>
+
+        </ul>
+        <h4>Cost</h4>
+        <ul>
+            <li id="subtotal"></li>
+            <li id="calculated_tax"></li>
+            <li id="delivery_fee"></li>
+            <li id="total"></li>
+        </ul>
+        <h4>Address</h4>
+        <p id="customer_name"></p>
+        <p id="customer_address"></p>
+        <p id="customer_phone"></p>
+    </div>
+
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="code.js"></script>
+
+</body>
+
+</html>
